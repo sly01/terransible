@@ -1,0 +1,4 @@
+#!/bin/bash
+/usr/bin/aws s3 sync s3://aerkoc-45212 /var/www/html/ --region eu-central-1
+/bin/touch /var/spool/cron/root
+sudo /bin/echo '*/5 * * * * aws s3 sync s3://aerkoc-45212 /var/www/html/ --region eu-central-1' >> /var/spool/cron/root
